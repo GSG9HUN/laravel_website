@@ -1,0 +1,4 @@
+body:not(.en) :lang(en), 
+body:not(.hu) :lang(hu), 
+body:not(.nether) :lang(nether) 
+{ display: none; }

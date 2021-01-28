@@ -1,0 +1,61 @@
+
+document.addEventListener('DOMContentLoaded',(event)=>{
+    bgcolor_loader();
+    document.getElementById('darkmode').onclick=function (){
+        let bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+        console.log("asder")
+
+        setBackground(bgColor.length);
+        bgcolor_saver();
+    }
+
+})
+
+
+
+function setBackground(bgColor){
+
+    if(bgColor===18)
+    {document.body.style.backgroundColor = 'rgb(34,34,34)';
+        document.body.style.color = "white";
+        document.getElementById("nav_dark_skip").style.color="rgb(34, 34, 34);";
+        document.getElementById("language").style.color="white";
+        document.getElementById("loginModal").style.color="black"
+    }
+    else
+    {
+        document.body.style.backgroundColor= "white";
+        document.body.style.color = "black";
+
+        document.getElementById("loginModal").style.color="black"
+    }
+}
+
+
+
+
+
+
+function bgcolor_saver(){
+    let value = window.getComputedStyle(document.body, null).getPropertyValue('background-color')
+    localStorage.setItem("color",value)
+}
+
+function bgcolor_loader(){
+    let body_color = localStorage.getItem("color");
+    if(body_color.length===18)
+    {
+        document.body.style.backgroundColor= "white";
+        document.body.style.color = "black";
+        document.getElementById("loginModal").style.color="black"
+    }
+    else
+    {
+        document.body.style.backgroundColor = 'rgb(34,34,34)';
+        document.body.style.color = "white";
+        document.getElementById("nav_dark_skip").style.color="rgb(34, 34, 34);";
+        document.getElementById("language").style.color="white";
+        document.getElementById("loginModal").style.color="black"
+
+    }
+}

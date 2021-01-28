@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    background-color: white;
+    color: black;
+}
+.nav_container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    position: fixed;
+    padding-left: 1%;
+    padding-right: 5%;
+    flex-wrap: nowrap;
+    position: fixed;
+    color: black;
+}
+.nav_logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5rem;
+}
+.nav_container i{
+    font-size: 35px;
+    padding: 10px 10px 10px 10px;
+    transition:all 1s ease ;
+}
+.search_box{
+    width: 330px;
+    height: 30px;
+    font-size: 15px;
+}
+#search_icon {
+    font-size: 20px;
+    padding: 0;
+    transition:all 1s ease ;
+    margin-left: 3px;
+    align-self: center;
+}
+.nav_container i:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.2);
+    transform: translatey(-5px);
+    transition:all 1s ease ;
+}
+#search_icon:hover{
+    transform: translatey(-5px);
+    transition:all 1s ease ;
+    background-color: rgba(0,0,0,0.0);
+}
+.bh_header_space{
+    width: 100%;
+    height: 50px;
+}
+.language_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#language{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+#language label{
+    background-color:rgba(34, 34, 34,0.5) ;
+    cursor: pointer;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}
+#darkmode{
+    cursor: pointer;
+}
+input{
+    border: none;
+    border-bottom: 1.5px solid black;
+    padding: 0px 5px 0 5px;
+}
+#moving_footer{
+    color: white;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    bottom: 0px;
+    background-color: rgb(34, 34, 34);
+    justify-content:space-between ;
+    align-items: center;
+}
+#darkmode{
+    font-size: 30px;
+    justify-self: start;
+    padding: 3px 10px 3px 10px;
+    margin: 0 10px 0 10px;
+    transition: all 0.5s ease ;
+}
+#up_arrow{
+    font-size: 30px;
+    justify-self: end;
+    padding: 3px 10px 3px 10px;
+    margin: 0 10px 0 10px;
+    transition: all 0.5s ease ;
+}
+#darkmode:hover,#up_arrow:hover {
+    background-color: rgba(255,255,255,0.3);
+    transition: all 0.5s ease ;
+}
