@@ -1,4 +1,7 @@
+
+
 @extends('layouts.layout')
+
 
 @section('content')
 
@@ -23,18 +26,15 @@
     <p lang="en"> asdasdasda </p>
 
 
-    @foreach($items as $item)
-        <div class="name">
-            {{$item->name}}
-            <div class="item">
-                <div class="img"><img src='{{asset("$item->image")}}' HEIGHT="400em" WIDTH="500em"/></div>
-                <div class="desciprion">{{$item->description}}</div>
-                <div class="price">{{$item->price}}</div>
-            </div>
+    <div class="text-center">
+        @foreach($items as $item)
+        <a href="{{route('home')}}"><img src="{{$item->image}}" class="card-img-top" ></a>
+        <a href=""><div class="product-name">{{$item->name}}</div></a>
+        <div class="product-price">{{$item->presentPrice()}}</div>
+        @endforeach
 
-        </div>
+    </div>
 
-    @endforeach
 
 @endsection
 

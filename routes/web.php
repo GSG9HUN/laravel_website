@@ -13,12 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',"IndexController@getIndex" );
+Route::get('/',"IndexController@Index" );
 
 /*Route::get('/users',function (){
     return View::make("index");
 });*/
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/shop','ShopController@index')->name('shop.index');
+
+//Auth::routes();
+Auth::routes(['verify' => true]);
+
+Route::get('/profile','UserController@index')->middleware('verified')->name('profile');
+
+Route::get('/home', 'IndexController@index')->name('home');
+
+

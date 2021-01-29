@@ -1,15 +1,21 @@
 <?php
 
-
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\View;
 
+use App\Item;
 
-class IndexController
+class IndexController extends Controller
 {
-function getIndex(){
-    $items=DB::table('items')->get();
-    return view::make('index')->with('items',$items);
-}
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $items = Item::inRandomOrder()->take(2)->get();
+
+        return view('index')->with('items',$items);
+    }
+
 }
