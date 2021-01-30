@@ -12,10 +12,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="{{asset('css/sidebar.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/pre_loader/pre_loader.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/Language/language.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/font_awsome/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/image.css')}}">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
@@ -43,7 +45,7 @@
 <div id="content_wrap_f_preloader"> <!--content_wrap_f_preloader start-->
     <div class="nav_container" id="nav_dark_skip"> <!--nav_container start-->
         <div class="nav_logo"> <!--nav_logo start-->
-            <h1>Best Shop EUNE (no yas mains pls)</h1>
+            <h1 style="opacity: 0">Best Shop EUNE (no yas mains pls)</h1>
         </div> <!--nav_logo end-->
 
         <div class="search"> <!--search start-->
@@ -168,16 +170,14 @@
             </div>
         </div>
     </form>
-
-
-
-
     <div class="bh_header_space"></div>
 
+
+
+    @yield('sidebar')
+
     @yield('content')
-
-
-
+    <div class="foot_spacer"></div>
     <div id="moving_footer"> <!-- moving_footer start -->
         <div id="dark_mode"> <!-- dark_mode start -->
             <i class="fas fa-adjust" id="darkmode"></i>
@@ -187,6 +187,8 @@
         </div> <!-- footer_up_arrow end -->
     </div> <!-- moving_footer end -->
 </div> <!--content_wrap_f_preloader end-->
+
+
 
 
 </body>

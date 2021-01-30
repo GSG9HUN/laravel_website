@@ -14,7 +14,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $items = Item::inRandomOrder()->take(2)->get();
+        $items = Item::all();
 
         return view('shop')->with('items',$items);
     }

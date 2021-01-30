@@ -13,7 +13,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $items = Item::inRandomOrder()->take(2)->get();
+        $items = Item::inRandomOrder()->get();
 
         return view('index')->with('items',$items);
     }

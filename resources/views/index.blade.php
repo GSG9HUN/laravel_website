@@ -2,10 +2,45 @@
 
 @extends('layouts.layout')
 
+@section('sidebar')
+    <div class="wrapper">
+
+        <nav id="sidebar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <h3> Kategóriák</h3>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">SUV</a>
+                        <a class="dropdown-item" href="#">KOMBI</a>
+                        <a class="dropdown-item" href="#">Off road</a>
+                        <a class="dropdown-item" href="#">Sport</a>
+                        <a class="dropdown-item" href="#">Szuperautó</a>
+                        <a class="dropdown-item" href="#">Teherautó</a>
+                        <a class="dropdown-item" href="#">Kamion</a>
+                    </div>
+                </div>
+                <div>
+                    <!-- Sidebar Links -->
+
+                </div>
+            </div>
+
+
+        </nav>
+
+
+
+    </div>
+@endsection
+
 
 @section('content')
 
-    <div>
+    {{--<div>
         <p  lang="en"><a lang="en" href="aaas/text.html">English</a></p>
         <p  lang="hu"><a lang="hu" href="aaas/text.html">Magyar</a></p>
         <p  lang="nether"><a lang="nether" href="aaas/text.html">Netherland</a></p>
@@ -24,13 +59,27 @@
     </div>
     <p lang="hu"> asdasdasda </p>
     <p lang="en"> asdasdasda </p>
+--}}
 
-
-    <div class="text-center">
+    <div class="item-wrapper">
         @foreach($items as $item)
-        <a href="{{route('home')}}"><img src="{{$item->image}}" class="card-img-top" ></a>
-        <a href=""><div class="product-name">{{$item->name}}</div></a>
-        <div class="product-price">{{$item->presentPrice()}}</div>
+            <div class="item">
+               <a href="">
+                        <img href="{{route('shop.index')}}" src="{{$item->image}}">
+               </a>
+
+
+
+
+                    <div class="product-name">
+                        <a href="{{route('shop.index')}}">{{$item->name}}</a>
+                    </div>
+
+                    <div class="product-price">{{$item->presentPrice()}}</div>
+
+            </div>
+
+
         @endforeach
 
     </div>

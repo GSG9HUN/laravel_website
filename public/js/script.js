@@ -17,17 +17,15 @@ function setBackground(bgColor){
 
     if(bgColor===18)
     {document.body.style.backgroundColor = 'rgb(34,34,34)';
-        document.body.style.color = "white";
+        document.body.style.color = "#d0d0d0";
         document.getElementById("nav_dark_skip").style.color="rgb(34, 34, 34);";
         document.getElementById("language").style.color="white";
-        document.getElementById("loginModal").style.color="black"
     }
     else
     {
-        document.body.style.backgroundColor= "white";
+        document.body.style.backgroundColor= "#d0d0d0";
         document.body.style.color = "black";
 
-        document.getElementById("loginModal").style.color="black"
     }
 }
 
@@ -45,17 +43,15 @@ function bgcolor_loader(){
     let body_color = localStorage.getItem("color");
     if(body_color.length===18)
     {
-        document.body.style.backgroundColor= "white";
+        document.body.style.backgroundColor= "#d0d0d0";
         document.body.style.color = "black";
-        document.getElementById("loginModal").style.color="black"
     }
     else
     {
         document.body.style.backgroundColor = 'rgb(34,34,34)';
-        document.body.style.color = "white";
+        document.body.style.color = "#d0d0d0";
         document.getElementById("nav_dark_skip").style.color="rgb(34, 34, 34);";
         document.getElementById("language").style.color="white";
-        document.getElementById("loginModal").style.color="black"
 
     }
 }
