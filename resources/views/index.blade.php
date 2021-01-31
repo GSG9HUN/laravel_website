@@ -64,15 +64,15 @@
     <div class="item-wrapper">
         @foreach($items as $item)
             <div class="item">
-               <a href="">
-                        <img href="{{route('shop.index')}}" src="{{$item->image}}">
+               <a href="{{route('shop.show',$item->name)}}">
+                        <img  src="{{$item->image}}">
                </a>
 
 
 
 
                     <div class="product-name">
-                        <a href="{{route('shop.index')}}">{{$item->name}}</a>
+                        <a href="{{route('shop.show',$item->name)}}">{{$item->name}}</a>
                     </div>
 
                     <div class="product-price">{{$item->presentPrice()}}</div>

@@ -23,6 +23,8 @@ Route::get('/',"IndexController@Index" );
 
 Route::get('/shop','ShopController@index')->name('shop.index');
 
+Route::get('/shop/{name}','ShopController@show')->name('shop.show');
+Route::get('/cart','CartController@show')->name('cart.show');
 //Auth::routes();
 Auth::routes(['verify' => true]);
 

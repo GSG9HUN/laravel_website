@@ -23,6 +23,8 @@ class CreateUserDetailsTable extends Migration
             $table->string('Address');
             $table->string('Phone');
             $table->timestamps();
+
+            $table->foreign('email')->references('email')->on('users');
         });
     }
 
