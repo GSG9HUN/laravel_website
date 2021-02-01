@@ -18,4 +18,5 @@ class UserController extends Controller
         return view('profile')->with("details",$details);
     }
 
+
 }

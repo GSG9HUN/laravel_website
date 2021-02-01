@@ -16,15 +16,15 @@ class CreateUserDetailsTable extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('email');
-            $table->string('First name');
-            $table->string('Last name');
+            $table->string('FirstName');
+            $table->string('LastName');
             $table->string('Country');
             $table->string('City');
             $table->string('Address');
             $table->string('Phone');
             $table->timestamps();
 
-            $table->foreign('email')->references('email')->on('users');
+            $table->foreign('email')->references('email')->on('users')->onUpdate('CASCADE');
         });
     }
 

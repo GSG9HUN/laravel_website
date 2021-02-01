@@ -45,7 +45,7 @@
 <div id="content_wrap_f_preloader"> <!--content_wrap_f_preloader start-->
     <div class="nav_container" id="nav_dark_skip"> <!--nav_container start-->
         <div class="nav_logo"> <!--nav_logo start-->
-            <h1 style="opacity: 0">Best Shop EUNE (no yas mains pls)</h1>
+          {{--  <h1 style="opacity: 0">Best Shop EUNE (no yas mains pls)</h1>--}}
         </div> <!--nav_logo end-->
 
         <div class="search"> <!--search start-->

@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\WelcomeMail;
+use App\UserDetails;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,15 +23,17 @@ Route::get('/',"IndexController@Index" );
 });*/
 
 
-Route::get('/shop','ShopController@index')->name('shop.index');
+Route::get('/shop','IndexController@index')->middleware('verified');
 
-Route::get('/shop/{name}','ShopController@show')->name('shop.show');
-Route::get('/cart','CartController@show')->name('cart.show');
+Route::get('/shop/{name}','ShopController@show')->middleware('verified')->name('shop.show');
+Route::get('/cart','CartController@show')->middleware('verified')->name('cart.show');
 //Auth::routes();
 Auth::routes(['verify' => true]);
 
+Route::get( "/profile/{id}",'UserDetailsController@update')->name('save');
+
 Route::get('/profile','UserController@index')->middleware('verified')->name('profile');
 
-Route::get('/home', 'IndexController@index')->name('home');
+Route::get('/home', 'IndexController@index')->middleware('verified')->name('home');
 
 
