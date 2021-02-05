@@ -2,9 +2,6 @@
 
 @section('content')
     @if(@auth)
-        <?php
-        $user = "none"
-        ?>
         @foreach($details as $data)
 
             @if($data['email'] == Auth::user()['email'])
@@ -51,9 +48,6 @@
 
                <button type="submit">Save</button>
            </form>
-
-
-
         </div>
     @endif
 

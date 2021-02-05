@@ -49,9 +49,16 @@
         </div> <!--nav_logo end-->
 
         <div class="search"> <!--search start-->
-            <input type="text" placeholder="Search..." onfocus="this.placeholder = ''"
-                   onblur="this.placeholder = 'Search...'" name="search" class="search_box">
-            <i class="fas fa-search" id="search_icon"></i>
+            <form method="POST" action="{{route('search.index')}}" id="search-bar">
+                @csrf
+                <input id="search" type="text" placeholder="Search..." onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Search...'" name="search" class="search_box">
+                <a onclick="event.preventDefault();
+                               document.getElementById('search-bar').submit()"
+                    style="color: black"> <i class="fas fa-search" id="search_icon"></i></a>
+
+            </form>
+
         </div> <!--search end-->
 
         <div class="language_container"> <!-- language_container start-->

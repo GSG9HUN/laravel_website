@@ -26,9 +26,14 @@ Route::get('/',"IndexController@Index" );
 Route::get('/shop','IndexController@index')->middleware('verified');
 
 Route::get('/shop/{name}','ShopController@show')->middleware('verified')->name('shop.show');
-Route::get('/cart','CartController@show')->middleware('verified')->name('cart.show');
+Route::get('/cart','CartController@show')->name('cart.show');
 //Auth::routes();
 Auth::routes(['verify' => true]);
+Route::get('/forgot-password', function () {
+    return view('auth.passwords.email');
+})->middleware('guest')->name('password.request');
+
+Route::post("/search","SearchController@index")->name("search.index");
 
 Route::get( "/profile/{id}",'UserDetailsController@update')->name('save');
 

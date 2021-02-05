@@ -8,6 +8,16 @@
     flex-wrap: wrap;
 
 }
+
+.add-to-cart-btn{
+    border: black 1px solid;
+    color: white;
+    min-width: 100px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #ff4d00;
+    border-radius: 200px;
+}
 .item{
     display: flex;
     align-items: center;

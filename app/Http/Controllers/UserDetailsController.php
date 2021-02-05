@@ -19,7 +19,6 @@ class UserDetailsController extends Controller
      */
     public function update(Request $request,int $id)
     {
-
         DB::table('users')->where('id',$id)->update([
            'email'=>$request['email']
         ]);
@@ -32,6 +31,7 @@ class UserDetailsController extends Controller
             'Address'=>$request['Address'],
             'Phone'=>$request['Phone'],
         ]);
+
         $details = UserDetails::all();
         return view('profile')->with('details',$details);
     }
