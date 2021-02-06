@@ -14,13 +14,13 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">SUV</a>
-                        <a class="dropdown-item" href="#">KOMBI</a>
-                        <a class="dropdown-item" href="#">Off road</a>
-                        <a class="dropdown-item" href="#">Sport</a>
-                        <a class="dropdown-item" href="#">Szuperautó</a>
-                        <a class="dropdown-item" href="#">Teherautó</a>
-                        <a class="dropdown-item" href="#">Kamion</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'SUV'])}}">SUV</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'KOMBI'])}}">KOMBI</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Off road'])}}">Off road</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Sport'])}}">Sport</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Szuperautó'])}}">Szuperautó</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Teherautó'])}}">Teherautó</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Kamion'])}}">Kamion</a>
                     </div>
                 </div>
                 <div>

@@ -19,8 +19,12 @@ body {
     font-size: 30px;
 }
 
-#username.form-control{
+#input.form-control{
     width: 25vh;
+    margin-bottom: 20px;
+}
+#username.form-control{
+
 }
 #password-confirm.form-control{
     width: 25vh;
@@ -31,6 +35,7 @@ body {
 }
 #email.form-control{
     width: 25vh;
+
 }
 .form-control{
     margin-right: auto;
@@ -215,14 +220,15 @@ text-align: center;
 #resend{
     font-size: 20px;
 }
-#email.form-control{
-    margin-bottom: 20px;
-}
 .alert-danger{
+    width: 100%;
     background-color: unset;
     margin-right: auto;
     margin-left: auto;
     display: inline-block;
+}
+.login_button{
+    width: 25vh;
 }
 
 

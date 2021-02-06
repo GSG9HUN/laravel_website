@@ -8,7 +8,7 @@
 
             <div class="input-group">
                 <label for="email" class="custom-label">{{ __('Username') }}</label>
-                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
+                <input id="input" type="text" class="form-control @error('username') is-invalid @enderror"
                        name="username" value="{{ old('username') }}" required autocomplete="username">
 
                 @error('username')
@@ -21,7 +21,7 @@
             </div>
             <div class="input-group">
                 <label for="email" class="custom-label">{{ __('E-Mail Address') }}</label>
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                <input id="input" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                        value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
                 <div class="alert-danger text-danger">
@@ -33,7 +33,7 @@
     </div>
     <div class="input-group">
         <label for="password" class="custom-label">{{ __('Password') }}</label>
-        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required
+        <input id="input" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required
                autocomplete="current-password">
 
         @error('password')
@@ -47,7 +47,7 @@
 
     <div class="input-group">
         <label for="password-confirm" CLASS="custom-label">{{ __('Confirm Password') }}</label>
-        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required
+        <input id="input" type="password" class="form-control" name="password_confirmation" required
                autocomplete="new-password">
     </div>
 

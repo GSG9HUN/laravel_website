@@ -9,46 +9,59 @@
             @endif
 
         @endforeach
-        <div id="user_detail_wrapper">
            <form method="GET" action="{{route('save',$data['id'])}}">
                @csrf
             <div >
-                <label>E-mail</label>
-                <div>
-                    <input name="email" type="email" value="{{$data['email']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div class="input-group">
+                <label class="custom-label">E-mail</label>
+                    <input id="input" name="email" type="email" value="{{$data['email']}}"   class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                @if(Session::has('email'))
+                    <div class="alert-danger text-danger text-center">
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ Session::get('email') }}</strong>
+                    </span>
+                    </div>
+                @endif
+
+                <div class="input-group">
+                    <label class="custom-label">First Name</label>
+                    <input id="input" name='First name' type="text" value="{{$data['FirstName']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
 
-                <label>First Name</label>
-                <div>
-                    <input name='First name' type="text" value="{{$data['FirstName']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <label>Last name</label>
-                <div>
-                    <input name='Last name' type="text" value="{{$data['LastName']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                <div class="input-group">
+                    <label class="custom-label">Last name</label>
+                    <input id="input" name='Last name' type="text" value="{{$data['LastName']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
 
-                <label>Country</label>
-                <div>
-                    <input name='Country' type="text" value="{{$data['Country']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <label>City</label>
-                <div>
-                    <input name="City" type="text" value="{{$data['City']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <label>Address</label>
-                <div>
-                    <input name="Address" type="text" value="{{$data['Address']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div class="input-group">
+                    <label class="custom-label">Country</label>
+                    <input id="input" name='Country' type="text" value="{{$data['Country']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
 
-                <label>Phone</label>
-                <div>
-                    <input name="Phone" type="tel" value="{{$data['Phone']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div class="input-group">
+                    <label class="custom-label">City</label>
+                    <input id="input" name="City" type="text" value="{{$data['City']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <div class="input-group">
+                    <label class="custom-label">Address</label>
+                    <input  id="input" name="Address" type="text" value="{{$data['Address']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+
+                <div class="input-group">
+                    <label class="custom-label">Phone</label>
+                    <input id="input" name="Phone" type="tel" value="{{$data['Phone']}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
             </div>
 
-               <button type="submit">Save</button>
+
+               <div class="input-group login_button">
+                   <button class="btn btn-success btn-block" type="submit">Save</button>
+               </div>
            </form>
-        </div>
     @endif
 
 @endsection

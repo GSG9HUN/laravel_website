@@ -21,7 +21,7 @@
                         <label for="email" class="text-center">{{ __('E-Mail Address') }}</label>
 
 
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                        <input id="input" type="email" class="form-control @error('email') is-invalid @enderror"
                                name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                         <div class="text-danger alert-danger">
                             @error('email')

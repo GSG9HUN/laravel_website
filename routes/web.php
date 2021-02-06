@@ -34,6 +34,7 @@ Route::get('/forgot-password', function () {
 })->middleware('guest')->name('password.request');
 
 Route::post("/search","SearchController@index")->name("search.index");
+Route::get("/search/{category}","CategorySearchController@show")->name("categorysearch.show");
 
 Route::get( "/profile/{id}",'UserDetailsController@update')->name('save');
 
