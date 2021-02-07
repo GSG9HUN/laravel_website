@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\UserDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,23 +21,26 @@ class UserDetailsController extends Controller
     public function update(Request $request,int $id)
     {
         try{
-            DB::table('users')->where('id',$id)->update([
-                'email'=>$request['email']
-            ]);
-            DB::table('user_details')->where('id',$id)->update([
-                'email'=>$request['email'],
-                'FirstName'=>$request['First_name'],
-                'LastName'=>$request['Last_name'],
-                'Country'=>$request['Country'],
-                'City'=>$request['City'],
-                'Address'=>$request['Address'],
-                'Phone'=>$request['Phone'],
-            ]);
+                User::query()->where('id',$id)->update([
+                    'email'=>$request['email']
+                ]);
+
+                UserDetails::query()->where('id',$id)->update([
+                    'email'=>$request['email'],
+                    'FirstName'=>$request['First_name'],
+                    'LastName'=>$request['Last_name'],
+                    'Country'=>$request['Country'],
+                    'City'=>$request['City'],
+                    'Address'=>$request['Address'],
+                    'Phone'=>$request['Phone'],
+                ]);
+
+
+
 
             $details = UserDetails::all();
             return view('profile')->with('details',$details);
         }catch (Exception $e){
-
             return redirect()->back()->with('email','email is already used');
     }
 

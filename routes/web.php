@@ -23,10 +23,11 @@ Route::get('/',"IndexController@Index" );
 });*/
 
 
-Route::get('/shop','IndexController@index')->middleware('verified');
+Route::get('/shop','IndexController@index')->middleware('verified')->name('shop');
 
 Route::get('/shop/{name}','ShopController@show')->middleware('verified')->name('shop.show');
-Route::get('/cart','CartController@show')->name('cart.show');
+Route::post('/cart/{userid}','CartController@show')->middleware('verified')->name('cart.show');
+Route::post('/cart','CartController@store')->middleware('verified')->name('cart.store');
 //Auth::routes();
 Auth::routes(['verify' => true]);
 Route::get('/forgot-password', function () {

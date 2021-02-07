@@ -77,7 +77,10 @@
 
                     <div class="product-price">{{$item->presentPrice()}}</div>
 
-                    <button class="add-to-cart-btn">Add to cart</button>
+                        @include('add_to_cart')
+
+
+
             </div>
 
 

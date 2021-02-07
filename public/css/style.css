@@ -204,8 +204,8 @@ input{
     font-size: 15px;
 }
 
-.card-header{
-text-align: center;
+.card_header{
+    text-align: center;
     margin-top: 25px;
     font-size: 30px;
     font-weight: bold;

@@ -109,9 +109,15 @@
         </div> <!--acount end-->
 
         <div class="cart"> <!--cart start -->
-            <a href="{{route('cart.show')}}" style="color: black">
-            <i class="fas fa-shopping-cart"></i>
-            </a>
+            <form id='cart_form' action="{{route('cart.show',auth()->id())}}" method="POST">
+                @csrf
+                <a onclick="document.getElementById('cart_form').submit();" style="color: black">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </form>
+
+
+
         </div> <!--cart end -->
     </div> <!--nav_container end-->
 
