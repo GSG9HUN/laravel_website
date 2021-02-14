@@ -31,7 +31,7 @@ class ShopController extends Controller
     {
         $product = Item::where('name',$name)->firstOrFail();
 
-        return view('shop')->with('product',$product);
+        return view('shop')->with('item',$product);
     }
 
 }

@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="authors" content="Seres Tamas, Olah Sandor Lajos">
+    <meta name="authors" content="Olah Sandor Lajos">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,91 +43,13 @@
 </div>
 
 <div id="content_wrap_f_preloader"> <!--content_wrap_f_preloader start-->
-    <div class="nav_container" id="nav_dark_skip"> <!--nav_container start-->
-        <div class="nav_logo"> <!--nav_logo start-->
-          {{--  <h1 style="opacity: 0">Best Shop EUNE (no yas mains pls)</h1>--}}
-        </div> <!--nav_logo end-->
+    @include('layouts.nav_container')
 
-        <div class="search"> <!--search start-->
-            <form method="POST" action="{{route('search.index')}}" id="search-bar">
-                @csrf
-                <input id="search" type="text" placeholder="Search..." onfocus="this.placeholder = ''"
-                       onblur="this.placeholder = 'Search...'" name="search" class="search_box">
-                <a onclick="event.preventDefault();
-                               document.getElementById('search-bar').submit()"
-                    style="color: black"> <i class="fas fa-search" id="search_icon"></i></a>
-
-            </form>
-
-        </div> <!--search end-->
-
-        <div class="language_container"> <!-- language_container start-->
-            <div class="language_icon"> <!--language start-->
-                <i class="fas fa-language" id="change_language"></i>
-            </div> <!--language end-->
-            <div id="language" style="display : none;"> <!-- language start-->
-                <div>
-                    <label id="en">English</label>
-                </div>
-                <div>
-                    <label id="nether">Netherland</label>
-                </div>
-                <div>
-                    <label id="hu">Hungarian</label>
-                </div>
-            </div> <!-- language end-->
-        </div> <!-- language_container end-->
-
-        <div class="acount"> <!--acount start-->
-            @guest
-                <i class="fas fa-sign-in-alt" id="login" data-toggle="modal" data-target="#loginModal"></i>
-
-            @else
-                <i class="fas fa-user-alt" data-toggle="collapse" data-target="#show-profile"></i>
-                <div class="collapse" id="show-profile" aria-expanded="false" aria-controls="collapseExample" >
-                    <ul style="display: flex; flex-direction: column; position: fixed">
-                        <li><a href=""  onclick="event.preventDefault();
-                                                     document.getElementById('profile-form').submit();">
-                                Profile
-                            </a>
-                            <form id="profile-form" action="{{ route('profile') }}" method="GET" class="d-none">
-                                @csrf
-                            </form>
-                        </li>
-                        <li ><a href=""
-                                onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            @endguest
-
-        </div> <!--acount end-->
-
-        <div class="cart"> <!--cart start -->
-            <form id='cart_form' action="{{route('cart.show',auth()->id())}}" method="POST">
-                @csrf
-                <a onclick="document.getElementById('cart_form').submit();" style="color: black">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-            </form>
-
-
-
-        </div> <!--cart end -->
-    </div> <!--nav_container end-->
-
-@include('layouts.login_modal')
+    @include('layouts.login_modal')
     <div class="bh_header_space"></div>
 
 
-
     @yield('sidebar')
-
     @yield('content')
     <div class="foot_spacer"></div>
     <div id="moving_footer"> <!-- moving_footer start -->
@@ -139,8 +61,6 @@
         </div> <!-- footer_up_arrow end -->
     </div> <!-- moving_footer end -->
 </div> <!--content_wrap_f_preloader end-->
-
-
 
 
 </body>

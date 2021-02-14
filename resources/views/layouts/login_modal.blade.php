@@ -53,8 +53,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <div class="signup-section">Not a member yet? <a href="{{route('register')}}" class="text-info"> Sign Up</a>.</div>
+
+
+                <div class="modal-footer d-inline-flex justify-content-center">
+                    <div class="text-left">
+                        <a  href="{{route("password.request")}}">
+                            Forgot your password?
+                        </a>
+
+                    </div>
+                    <div class="signup-section">
+                        Not a member yet?
+                        <a href="{{route('register')}}" class="text-info"> Sign Up</a>.</div>
+
                 </div>
             </div>
         </div>

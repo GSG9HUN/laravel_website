@@ -61,12 +61,15 @@
     <p lang="en"> asdasdasda </p>
 --}}
 
+    @include('layouts.sidebar-left')
     <div class="item-wrapper">
         @foreach($items as $item)
             <div class="item">
+                <div class="img">
                <a href="{{route('shop.show',$item->name)}}">
                         <img  src="{{$item->image}}">
                </a>
+                </div>
 
 
 

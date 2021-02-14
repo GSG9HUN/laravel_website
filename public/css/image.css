@@ -1,8 +1,10 @@
 
 .item-wrapper{
     display: flex;
-    margin-top: 2%;
     align-items: center;
+    margin-top: 2%;
+    margin-left: 23vh;
+    justify-content: space-around;
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,27 +24,25 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin:2vh ;
     height: auto;
-    min-width: 20%;
-    max-width: 20%;
-    margin-bottom: 1.5%;
-
+    width: 25%;
 }
 
-img{
+.item img{
+    width: 100%;
     height: auto;
-    width: 75%;
-    min-width: 60%;
+    object-fit: contain;
+    ;
+}
 
-
+.img{
 }
 
 a {
    text-align: center;
 }
 
-
-.teszt{
-    display: flex;
-    align-self: center;
+.col{
+    padding-top: 2vh;
 }

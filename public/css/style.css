@@ -130,16 +130,7 @@ body {
     width: 100%;
     height: 50px;
 }
-.language_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#language{
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-}
+
 
 .text-center{
     font-weight: bold;
@@ -147,11 +138,11 @@ body {
     margin-bottom: 20px;
 }
 
-#language label{
-    background-color:rgba(34, 34, 34,0.5) ;
-    cursor: pointer;
-    font-family: 'Staatliches', cursive;
-    font-size: 20px;
+
+#nether:hover,
+#en:hover,
+#hu:hover{
+    color: violet;
 }
 #darkmode{
     cursor: pointer;
@@ -178,7 +169,7 @@ input{
 
 .foot_spacer{
     width: 100%;
-    height: 25px;
+    height: 40px;
 }
 #darkmode{
     font-size: 30px;
@@ -204,7 +195,7 @@ input{
     font-size: 15px;
 }
 
-.card_header{
+.card-header{
     text-align: center;
     margin-top: 25px;
     font-size: 30px;
@@ -231,4 +222,53 @@ text-align: center;
     width: 25vh;
 }
 
+.container{
+    padding-top: 2vh;
+}
+
+.sidebar-left{
+    height: 100%;
+    width: 23vh;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+    background-color: #ff4d00;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+h1{
+    margin: auto;
+}
+.left_sidebar-spacer{
+    padding-top: 10vh;
+}
+.filter-container{
+    display: flex;
+    flex-direction: column;
+}
+
+tr{
+    width: 100%;
+}
+tbody>tr>td{
+    padding-top: 2vh;
+}
+.checkboxtd{
+    margin-left: 10px;
+    display: flex;
+}
+
+.checkboxtd>input[type=checkbox]{
+   margin: 0;
+}
+
+.price>h3{
+    text-align: center;
+}
+.order>h3{
+    text-align: center;
+}
 

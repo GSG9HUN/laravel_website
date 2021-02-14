@@ -12,7 +12,9 @@ h3{
     margin-left: 5px;
 }
 #sidebar {
+    border: 2px solid black;
     display: flex;
+    z-index: 1;
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -38,6 +40,9 @@ a.dropdown-item{
 a:link{
     color: black;
 }
+#cart a:link{
+    color: blue;
+}
 .dropdown-item{
     display: flex;
     margin-left: 5px;
@@ -55,6 +60,13 @@ a:link{
     margin-left: 10px;
     min-width: auto;
     margin-right: 10px;
+}
+
+.inside-sidebar-left{
+    background-color: rgba(255,255,255,0.5);
+    width: 21vh;
+    height: 100%;
+    margin: auto;
 }
 
 @media (max-width: 768px) {

@@ -13,6 +13,10 @@ class Cart extends Model
         return $value->format($this->price);
     }
 
+    public function getSum(){
+        return Cart::query()->sum('price');
+    }
+
     public static function add($userid,$id, $image, $name,  $quantity,  $price ,$description)
     {
 
