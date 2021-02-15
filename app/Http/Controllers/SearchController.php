@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\Item;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
+use function GuzzleHttp\Psr7\str;
 
 class SearchController extends Controller
 {
@@ -32,7 +35,21 @@ class SearchController extends Controller
      */
     public function show(Request $request)
     {
-        //
+        if($request['order_1']=="on"){
+            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderByDesc('price')->get();
+
+        }elseif($request['order_2']=="on"){
+            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderBy('price')->get();
+
+        }
+        elseif($request['order_3']=="on"){
+            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderByDesc('name')->get();
+
+        }else{
+            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderBy('name')->get();
+        }
+
+        return view('category')->with('items',$items);
     }
 
 }

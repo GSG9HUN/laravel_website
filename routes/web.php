@@ -38,6 +38,8 @@ Route::get('/forgot-password', function () {
 Route::post("/search","SearchController@index")->name("search.index");
 Route::get("/search/{category}","CategorySearchController@show")->name("categorysearch.show");
 
+Route::Post("/search/order",'SearchController@show')->name('detailed.search');
+
 Route::get( "/profile/{id}",'UserDetailsController@update')->name('save');
 
 Route::get('/profile','UserController@index')->middleware('verified')->name('profile');

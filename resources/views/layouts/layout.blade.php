@@ -30,6 +30,7 @@
     <script src="{{URL::asset('js/script.js')}}"></script>
     <script src="{{asset('js/language_icon.js')}}"></script>
     <script src="{{asset('js/set_language.js')}}"></script>
+    <script src="{{asset('js/input_range_value.js')}}"></script>
 
 </head>
 

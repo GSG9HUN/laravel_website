@@ -1,15 +1,7 @@
 <div class="nav_container" id="nav_dark_skip"> <!--nav_container start-->
     <div class="nav_logo"> <!--nav_logo start-->
-        <h1 > <a style="text-decoration: none;color: black" href="{{route('home')}}">Responzív webfejlesztés</a></h1>
+        <h1><a style="text-decoration: none;color: black" href="{{route('home')}}">Responzív webfejlesztés</a></h1>
     </div> <!--nav_logo end-->
-
-
-
-
-
-
-
-
 
 
     <div class="search"> <!--search start-->
@@ -24,13 +16,6 @@
         </form>
 
     </div> <!--search end-->
-
-
-
-
-
-
-
 
 
     <div class="language_container"> <!-- language_container start-->
@@ -51,12 +36,6 @@
             </ul>
         </div> <!-- language end-->
     </div> <!-- language_container end-->
-
-
-
-
-
-
 
 
     <div class="acount"> <!--acount start-->
@@ -88,12 +67,6 @@
         @endguest
 
     </div> <!--acount end-->
-
-
-
-
-
-
 
 
     <div class="cart"> <!--cart start -->
