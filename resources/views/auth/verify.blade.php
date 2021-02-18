@@ -3,7 +3,7 @@
 @section('content')
 <div class="verify_container">
     <div class="card">
-        <div class="card_header">{{ __('Verify Your Email Address') }}</div>
+        <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
         <div class="card-body">
             @if (session('resent'))

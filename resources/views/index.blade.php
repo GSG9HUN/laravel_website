@@ -14,13 +14,12 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'SUV'])}}">SUV</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'KOMBI'])}}">KOMBI</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Off road'])}}">Off road</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Sport'])}}">Sport</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Szuperautó'])}}">Szuperautó</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Teherautó'])}}">Teherautó</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Kamion'])}}">Kamion</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'SUV'])}}">Memóriák</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'KOMBI'])}}">Processzorok</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Off road'])}}">Videókártyák</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Sport'])}}">Gépházak</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Szuperautó'])}}">Perifériák</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Teherautó'])}}">Merevlemezek</a>eeeeeeeeeeeeeeeee
                     </div>
                 </div>
                 <div>
