@@ -21,10 +21,8 @@ input.addEventListener('keyup', function(event) {
   reset();
   console.log(event.key);
   if (input.value.trim()) {
-    console.log("faszom");
     if (iti.isValidNumber()==null) {
       validMsg.classList.remove("hide");
-      console.log("faszom")
 
     } else {
       input.classList.add("error");

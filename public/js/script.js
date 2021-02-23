@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded',(event)=>{
     bgcolor_loader();
     document.getElementById('darkmode').onclick=function (){
         let bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
-        console.log("asder")
-
         setBackground(bgColor.length);
         bgcolor_saver();
     }
@@ -41,6 +39,9 @@ function bgcolor_saver(){
 
 function bgcolor_loader(){
     let body_color = localStorage.getItem("color");
+    if(body_color==null){
+        return;
+    }
     if(body_color.length===18)
     {
         document.body.style.backgroundColor= "#d0d0d0";

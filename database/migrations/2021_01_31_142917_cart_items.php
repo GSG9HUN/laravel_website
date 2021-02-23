@@ -20,7 +20,7 @@ class CartItems extends Migration
             $table->integer('price');
             $table->integer('quantity');
             $table->string('image');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->timestamps();
 
         });

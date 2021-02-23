@@ -1,9 +1,7 @@
 window.onload= function (){
-    const english = document.getElementById("en");
-    const netherland = document.getElementById("nether");
-    const hungarian = document.getElementById("hu");
-
-
+    var english = document.getElementById("en");
+    var netherland = document.getElementById("nether");
+    var hungarian = document.getElementById("hu");
 
     netherland.addEventListener("click",(e)=>{
         document.body.className = "nether";

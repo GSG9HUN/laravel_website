@@ -1,3 +1,4 @@
+<script src="{{asset('js/input_range_value.js')}}"></script>
 <div class="sidebar-left">
     <div class="inside-sidebar-left">
 
@@ -75,3 +76,4 @@
         </div>
     </div>
 </div>
+

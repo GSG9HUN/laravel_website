@@ -14,12 +14,11 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'SUV'])}}">Memóriák</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'KOMBI'])}}">Processzorok</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Off road'])}}">Videókártyák</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Sport'])}}">Gépházak</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Szuperautó'])}}">Perifériák</a>
-                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Teherautó'])}}">Merevlemezek</a>eeeeeeeeeeeeeeeee
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'RAM'])}}">Memóriák</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Processor'])}}">Processzorok</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Video Card'])}}">Videókártyák</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Motherboard'])}}">Alaplap</a>
+                        <a class="dropdown-item" href="{{route('categorysearch.show',['category'=>'Hard disk'])}}">Merevlemezek</a>
                     </div>
                 </div>
                 <div>

@@ -53,7 +53,6 @@ class CartController extends Controller
      */
     public function show(int $userid)
     {
-        return '11';
         $items= Cart::query()->where('userid','=',$userid)->get();
 
         return view('cart')->with('user_items',$items);
