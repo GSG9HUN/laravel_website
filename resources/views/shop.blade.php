@@ -433,26 +433,42 @@
                     </tr>
                     <tr>
                         <td>
-                            Frequency
-                        </td>
-                        <td>
-                            {{$item->frequency}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Memory Type
-                        </td>
-                        <td>
-                            {{$item->memory_type}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             Capacity
                         </td>
                         <td>
                             {{$item->capacity}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Round per minutes
+                        </td>
+                        <td>
+                            {{$item->rpm}} RPM
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Buffer
+                        </td>
+                        <td>
+                            {{$item->buffer}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Interface
+                        </td>
+                        <td>
+                            {{$item->interface}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Format
+                        </td>
+                        <td>
+                            {{$item->format}}
                         </td>
                     </tr>
                     <tr>

@@ -42,6 +42,10 @@ class CreateItemsTable extends Migration
             $table->string('chipset')->nullable();
             $table->string('sup_proc')->nullable();
             $table->string('video_slot')->nullable();
+            $table->string('rpm')->nullable();
+            $table->string('buffer')->nullable();
+            $table->string('interface')->nullable();
+            $table->string('format')->nullable();
             $table->boolean('dual_channel')->nullable();
             $table->integer('memory_slots')->nullable();
             $table->timestamps();

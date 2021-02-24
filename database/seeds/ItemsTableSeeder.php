@@ -617,8 +617,132 @@ class ItemsTableSeeder extends Seeder
 
         //HDD and SSD
 
-        Item::create([]);
-
+        Item::create([
+            'name'=>'Seagate IronWolf 6TB Merevlemez, 5400RPM, 256MB cache, SATA-III',
+            'category'=>'Hard disk',
+            'price'=>'48690',
+            'brand'=>'Seagate',
+            'image'=>'images/seagate_ironwolf.jpg',
+            'quantity'=>'20',
+            'capacity'=>'6TB',
+            'rpm'=>'5400',
+            'buffer'=>'256MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5"'
+        ]);
+        Item::create([
+            'name'=>'WD Red 4TB Merevlemez, 5400rpm, 64MB cache, SATA III',
+            'category'=>'Hard disk',
+            'price'=>'49990',
+            'brand'=>'WD',
+            'image'=>'images/wd_red_4TB.jpg',
+            'quantity'=>'25',
+            'capacity'=>'4TB',
+            'buffer'=>'64MB',
+            'interface'=>'SATA III',
+        ]);
+        Item::create([
+            'name'=>'WD Blue 1TB Merevlemez, 5400rpm, 64MB cache, SATA III',
+            'category'=>'Hard disk',
+            'price'=>'18900',
+            'brand'=>'WD',
+            'image'=>'images/wd_blue_1TB.jpg',
+            'quantity'=>'5',
+            'capacity'=>'1TB',
+            'rpm'=>'5400',
+            'buffer'=>'64MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5"'
+        ]);
+        Item::create([
+            'name'=>'WD Blue 2TB merevlemez, 5400rpm, 64MB cache, SATA III',
+            'category'=>'Hard disk',
+            'price'=>'18090',
+            'brand'=>'WD',
+            'image'=>'images/wd_blue_2TB.jpg',
+            'quantity'=>'119',
+            'capacity'=>'2TB',
+            'rpm'=>'5400',
+            'buffer'=>'64MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5"'
+        ]);
+        Item::create([
+            'name'=>'Seagate SkyHawk HDD 1TB CCTV belső merevlemez , ST1000VX005',
+            'category'=>'Hard disk',
+            'price'=>'24975',
+            'brand'=>'Seagate',
+            'image'=>'images/seagete_skyhawk_1TB.jpg',
+            'quantity'=>'52',
+            'capacity'=>'1TB',
+            'rpm'=>'5900',
+            'buffer'=>'64MB',
+            'interface'=>'SATA III'
+        ]);
+        Item::create([
+            'name'=>'WD Blue 3TB merevlemez, 5400rpm, 64MB cache, SATA III',
+            'category'=>'Hard disk',
+            'price'=>'32990',
+            'brand'=>'WD',
+            'image'=>'images/wd_blue_3TB.jpg',
+            'quantity'=>'25',
+            'capacity'=>'3TB',
+            'rpm'=>'5400',
+            'buffer'=>'64MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5"'
+        ]);
+        Item::create([
+            'name'=>'WD Blue 500GB merevlemez, 7200rpm, 32MB, SATA 3',
+            'category'=>'Hard disk',
+            'price'=>'21065',
+            'brand'=>'WD',
+            'image'=>'images/wd_blue_500GB.jpg',
+            'quantity'=>'32',
+            'capacity'=>'500GB',
+            'rpm'=>'7200',
+            'buffer'=>'32MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5"'
+        ]);
+        Item::create([
+            'name'=>'Toshiba DT01ACA 1TB merevlemez, 7200rpm, 32MB cache, SATA III',
+            'category'=>'Hard disk',
+            'price'=>'16990',
+            'brand'=>'Toshiba',
+            'image'=>'images/toshiba_1TB.jpg',
+            'quantity'=>'20',
+            'capacity'=>'1TB',
+            'rpm'=>'7200',
+            'buffer'=>'32 MB',
+            'interface'=>'SATA III'
+        ]);
+        Item::create([
+            'name'=>'Toshiba 4TB N300 SATA3 3.5" NAS HDD',
+            'category'=>'Hard disk',
+            'price'=>'42670',
+            'brand'=>'Toshiba',
+            'image'=>'images/toshiba_4TB.jpg',
+            'quantity'=>'15',
+            'capacity'=>'4TB',
+            'rpm'=>'7200',
+            'buffer'=>'125MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5 colos NAS'
+        ]);
+        Item::create([
+            'name'=>'Seagate IronWolf Pro merevlemez, 16TB, 7200RPM, 256MB cache, SATA-III',
+            'category'=>'Hard disk',
+            'price'=>'203067',
+            'brand'=>'Seagate',
+            'image'=>'images/seagate_ironwolf_pro_16TB.jpg',
+            'quantity'=>'10',
+            'capacity'=>'16TB',
+            'rpm'=>'7200',
+            'buffer'=>'256MB',
+            'interface'=>'SATA III',
+            'format'=>'3.5"'
+        ]);
     }
 }
 
