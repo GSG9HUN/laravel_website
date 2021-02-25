@@ -82,8 +82,5 @@
         <a onclick="document.getElementById('cart_form').submit();" style="color: black">
             <i class="fas fa-shopping-cart"></i>
         </a>
-        </form>
-
-
     </div> <!--cart end -->
 </div> <!--nav_container end-->

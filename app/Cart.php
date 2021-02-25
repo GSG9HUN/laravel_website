@@ -14,7 +14,9 @@ class Cart extends Model
     }
 
     public function getSum(){
-        return Cart::query()->sum('price');
+        $result = Cart::query()->sum('price');
+        $value = new \NumberFormatter("hu-HU",\NumberFormatter::DECIMAL);
+        return $value->format($result);
     }
 
     public static function add($userid,$id, $image, $name,  $quantity,  $price ,$description)

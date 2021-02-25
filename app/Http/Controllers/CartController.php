@@ -49,13 +49,13 @@ class CartController extends Controller
      * Display the specified resource.
      *
      * @param  int  $userid
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show(int $userid)
     {
         $items= Cart::query()->where('userid','=',$userid)->get();
 
-        return view('cart')->with('user_items',$items);
+        return view('cart')->with(['user_items'=>$items,"user_id"=>$userid]);
     }
 
 
@@ -63,19 +63,30 @@ class CartController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function destroy(int $id)
     {
+
             $quantity =Cart::query()->select('quantity')->where('id','=',$id)->get();
-            Cart::query()->where('id','=',$id)->update(['quantity'=>$quantity[0]['quantity']-1]);
+            $value =  $quantity[0]['quantity'];
+            Cart::query()->where('id','=',$id)->update(['quantity'=>$value-1]);
             $quantity =Cart::query()->select('quantity')->where('id','=',$id)->get();
             if($quantity[0]['quantity']==0){
                 Cart::query()->where('id','=',$id)->delete();
             }
-
-            return redirect()->route('cart.show',auth()->user()['id']);
+            $items= Cart::query()->where('userid','=',auth()->id())->get();
+            return view('cart')->with(['user_items'=>$items,"user_id"=>auth()->id()]);
 
 
     }
+
+    public function add(int $id){
+        $quantity =Cart::query()->select('quantity')->where('id','=',$id)->get();
+        $value =  $quantity[0]['quantity'];
+        Cart::query()->where('id','=',$id)->update(['quantity'=>$value+1]);
+        $items= Cart::query()->where('userid','=',auth()->id())->get();
+        return view('cart')->with(['user_items'=>$items,"user_id"=>auth()->id()]);
+    }
+
 }
