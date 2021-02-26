@@ -14,9 +14,15 @@ class Cart extends Model
     }
 
     public function getSum(){
-        $result = Cart::query()->sum('price');
+        $results = Cart::query()->select('quantity','price')->get();
+        $sum = array();
+        foreach ($results as $value){
+                $multiply = $value['price']* $value['quantity'];
+                array_push($sum,$multiply);
+            }
+
         $value = new \NumberFormatter("hu-HU",\NumberFormatter::DECIMAL);
-        return $value->format($result);
+        return $value->format(array_sum($sum));
     }
 
     public static function add($userid,$id, $image, $name,  $quantity,  $price ,$description)

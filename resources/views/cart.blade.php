@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-
+@if(!$user_items->isEmpty())
     <table class="table">
         <thead>
         <tr>
@@ -16,7 +16,8 @@
                 <td>
                     <div class="item">
                         <a href="{{route('shop.show',$item->name)}}">
-                            <img class="card-img" src="../{{$item->image}}">
+                            <img id="{{$item->id}}" class="card-img" src="../../{{$item->image}}">
+
                         </a>
                     </div>
                 </td>
@@ -27,23 +28,30 @@
                         <div>{{$item->quantity}}</div>
                         <div style="margin-left: 1vh">
                             <div>
-                                <form id="destroy" method="post" action="{{route('cart.destroy',$item->id)}}">
+                                <form id="{{$item->id}}destroy" method="get" action="{{route('cart.index',[$item->id,"destroy"])}}">
                                     @csrf
                                     <input type="hidden" value="{{$item->id}}" name="id">
                                 </form>
-                                <a onclick="document.getElementById('destroy').submit()"><i class="fas fa-minus"></i></a>
+                                <a onclick="document.getElementById('{{$item->id}}destroy').submit()"><i class="fas fa-minus"></i></a>
 
                             </div>
                             <div>
-                                <form id="add" method="get" action="{{route('cart.add',$item->id)}}">
+                                <form id="{{$item->id}}add" method="get" action="{{route('cart.index',[$item->id,"add"])}}">
                                     @csrf
-                                    <input type="hidden" value="{{$item->id}}" name="param">
+                                    <input type="hidden" value="{{$item->id}}" name="id">
                                 </form>
-                                <a onclick="document.getElementById('add').submit()"
-                                ><i id="plus" class="fas fa-plus"></i></a>
+                                <a onclick="document.getElementById('{{$item->id}}add').submit()"
+                                ><i class="fas fa-plus"></i></a>
                             </div>
 
-
+                            <div>
+                                <form id="{{$item->id}}remove" method="get" action="{{route('cart.index',[$item->id,"remove"])}}">
+                                    @csrf
+                                    <input type="hidden" value="{{$item->id}}" name="id">
+                                </form>
+                                <a  onclick="document.getElementById('{{$item->id}}remove').submit()"
+                                ><i  class="fas fa-times-circle"></i></a>
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -72,5 +80,15 @@
         </div>
 
     </form>
+
+@else
+    <div class="text-center">
+        <div class="text-danger">
+            A kosarad üres, előbb termékeket kell, hozzá adj, hogy megtudd nézni mi van a kosaradban!
+        </div>
+        <a href="{{route('home')}}">Klikkelj ide, hogy visszatérj a Webshophoz!</a>
+    </div>
+@endif
+
 
 @endsection
