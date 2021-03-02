@@ -1,0 +1,254 @@
+.iti__flag {background-image: url('../../img/country_codes/flags.png ');}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../../img/country_codes/flags@2x.png")}}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    background: linear-gradient(90deg, rgb(0, 0, 163), rgb(53, 0, 53));
+}
+.reg_container{
+    width: 1000px;
+    height: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius:30px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sign_up{
+    font-family: 'Germania One', cursive;
+    font-size: 80px;
+    margin-top: 15px;
+}
+.username, .email, .password, .confirm_password {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+.personal_dt, .billing{
+    font-family: 'Heebo', sans-serif;
+    margin-top: 40px;
+    font-size: 40px;
+}
+.egymas_melle_rendezo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.first_name, .last_name{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 10px 0 10px ;
+}
+.number{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.country, .city, .bundesland, .postal_code, .adress, .building_number{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.building_number{
+    font-size: 14px;
+}
+.tower_block_warning{
+    font-size: 18px;
+    color: rgb(66, 66, 66);
+    margin-top: 30px;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+input{
+    width: 300px;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    margin-top: 7px;
+}
+.postal_code_holder{
+    width: 150px;
+}
+.last_name_placeholder, .first_name_placeholder{
+    width: 200px;
+}
+.building_number_placeholder{
+    width: 140px;
+    margin-top: 18px;
+}
+.tower_block_placeholder, .apartment_placeholder{
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.tower_block, .apartment{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.apartment{
+    margin-left: 0px;
+}
+#submit{
+    margin: 80px 0 30px 0;
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: rgb(0, 148, 20);
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: rgb(0, 211, 28) ;
+}
+span{
+    font-family: 'Delius', cursive;
+    font-size: 18px;
+    margin-top: 3px;
+    margin-left: 5px;
+    margin-right: auto;
+    color: red;
+}
+i{
+    position: absolute;
+    margin-right: 0;
+    margin-left: auto;
+    color: red;
+    margin-top: 47px;
+    margin-left: 270px;
+}
+.first_name_felkialto{
+    margin-left: 170px;
+}
+.last_name_felkialto{
+    margin-left: 170px;
+}
+.country_felkialto{
+    margin-top: 49px;
+}
+.city_felkialto{
+    margin-top: 49px;
+}
+.bundesland_felkialto{
+    margin-top: 49px;
+}
+.postal_code_felkialto{
+    margin-top: 49px;
+    margin-left: 120px;
+}
+.adress_felkialto{
+    margin-top: 49px;
+}
+.building_number_felkialto{
+    margin-top: 52px;
+    margin-left: 110px;
+    font-size: 18px;
+}
+.adress_block_felkialto{
+    margin-top: 49px;
+}
+.tower_block_felkialto{
+    margin-top: 49px;
+    margin-left: 120px;
+    font-size: 19px;
+}
+.apartment_felkialto{
+    margin-top: 49px;
+    margin-left: 120px;
+    font-size: 19px;
+}
+.number_felkialto{
+    margin-left: 275px;
+    z-index: 2;
+}
+#regex{
+    color: black;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 665px;
+    border: 1px solid rgb(163, 163, 163);
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(255, 255, 255);
+}
+#regex h5{
+    font-size: 20px;
+}
+#regex p{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.felsorolas_vonalka{
+    position: relative;
+    width: 15px;
+    height: 3px;
+    background-color: rgb(219, 219, 219);
+    align-content: center;
+    display: flex;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+.pw_rendezo{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+#username{
+    border: rgb(0,0,0) solid 2px;
+    border-radius: 5px;
+}
+#email{
+    border: rgb(0,0,0) solid 2px;
+    border-radius: 5px;
+}
+#password{
+    border: rgb(0,0,0) solid 2px;
+    border-radius: 5px;
+}
+#confirm_password{
+    border: rgb(0,0,0) solid 2px;
+    border-radius: 5px;
+}
+select{
+    width: 100px;
+    height: 25px;
+    margin-top: 2px;
+}
