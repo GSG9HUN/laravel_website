@@ -13,16 +13,17 @@ class CreateSaveOrdersTable extends Migration
      */
     public function up()
     {
+        $this->down();
         Schema::create('save_orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('item_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('item_id');
             $table->date('verified_by_shop')->nullable();
             $table->timestamps();
 
 
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('CASCADE');
-            $table->foreign('item_id')->references('id')->on('items')->onUpdate('CASCADE');
+            $table->foreign('user_id')->references('id')->on('laravel.users')->onUpdate('CASCADE');
+            $table->foreign('item_id')->references('id')->on('laravel.items')->onUpdate('CASCADE');
         });
     }
 

@@ -29,6 +29,15 @@ class Cart extends Model
         return Cart::query()->where('userid','=',$user_id)->get()->toArray();
     }
 
+    public static function delete_items(int $user_id)
+    {
+        $item_id = Cart::query()->select('id')->where('userid','=', $user_id)->get();
+
+        foreach ($item_id as $id){
+            Cart::query()->where('id', '=', $id['id'])->where('userid','=',$user_id)->delete();
+        }
+    }
+
     public static function add($userid,$id, $image, $name,  $quantity,  $price ,$description)
     {
 

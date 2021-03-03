@@ -13,8 +13,9 @@ class SaveOrdersController extends Controller
         $items = Cart::getitems($user_id);
 
         if(save_orders::insert($user_id,$items)){
-
-            return view('/');
+            //email küldés h sikeresen leadta a rendelést
+            $itemis=Cart::delete_items($user_id);
+            return $itemis;
         }
 
         return view('unsuccess');

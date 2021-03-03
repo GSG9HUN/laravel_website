@@ -87,7 +87,7 @@ class CartController extends Controller
             Cart::query()->where('id','=',$id)->update(['quantity'=>$value-1]);
             $quantity =Cart::query()->select('quantity')->where('id','=',$id)->get();
             if($quantity[0]['quantity']==0){
-                Cart::query()->where('id','=',$id)->delete();
+                Cart::query()->where('id','=',$id)->where('userid','=',auth()->id())->delete();
             }
             $items= Cart::query()->where('userid','=',auth()->id())->get();
             return view('cart')->with(['user_items'=>$items,"user_id"=>auth()->id()]);
