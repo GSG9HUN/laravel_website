@@ -1,7 +1,7 @@
 
 
 @extends('layouts.layout')
-
+@include('layouts.login_modal')
 @section('sidebar')
     <div class="wrapper">
 

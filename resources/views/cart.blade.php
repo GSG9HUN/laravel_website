@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@include('layouts.login_modal')
 @section('content')
 @if(!$user_items->isEmpty())
     <table class="table">

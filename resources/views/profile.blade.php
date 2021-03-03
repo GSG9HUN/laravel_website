@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-
+@include('layouts.login_modal')
 @section('content')
     @if(@auth)
         @foreach($details as $data)

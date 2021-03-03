@@ -1,19 +1,18 @@
 @extends('layouts.layout')
 @section('content')
-        <div>
+        <div class="text-info text-center">
             A rendelésed nem sikerült rögzíeni kérlek próbáld újra később.
         </div>
-
-        <div>
-            <p>
-                5 másodperc múlva átírányítünk a
-                <span> <a href="{{route('home')}}">kezdő oldalra</a>.</span>
-            </p>
+            <div class="text-center">
+                <p>
+                    5 másodperc múlva átírányítünk a
+                    <span> <a href="{{route('home')}}">kezdő oldalra</a>.</span>
+                </p>
+            </div>
         </div>
-    </div>
-    <script>
-        window.onload = function (){
-            setTimeout(function(){ window.location.href = "/" }, 5000);
-        }
-    </script>';
+        <script>
+            window.onload = function (){
+                setTimeout(function(){ window.location.href = "/" }, 5000);
+            }
+        </script>';
 @endsection

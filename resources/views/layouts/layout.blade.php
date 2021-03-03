@@ -47,7 +47,6 @@
 <div id="content_wrap_f_preloader"> <!--content_wrap_f_preloader start-->
     @include('layouts.nav_container')
 
-    @include('layouts.login_modal')
     <div class="bh_header_space"></div>
 
 
