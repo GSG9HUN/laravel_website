@@ -13,7 +13,7 @@ Order By : {{auth()->user()['username']}}
 
 
 @component('mail::button', ['url' => '','color'=>'primary'])
-    <a href="{{route('confirmByShop',["user_id"=>auth()->id(),"token"=>sha1(time()),serialize($items)])}}"> Order processing</a>
+    <a href="{{route('confirmByShop',auth()->id())}}"> Order processing</a>
 @endcomponent
 
 @endcomponent

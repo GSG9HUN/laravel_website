@@ -3,14 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Item;
 use App\save_orders;
-use Illuminate\Http\Request;
 
 class SaveOrdersController extends Controller
 {
 
-    public function verify($user_id,$token,array $item_ids){
-        return $item_ids;
+    public function verify($user){
+        $items = save_orders::getItems($user);
+        if(empty($items)){
+            return false;
+        }
+        foreach ($items as $item){
+            $verify_token=date ("Y-m-d H:i:s");
+            save_orders::update_item($item,$verify_token);
+        }
+
+        return view('success_confirm_by_shop')->with("name",auth()->user()['username']);
     }
 
     public function index(int $user_id){
@@ -19,8 +28,12 @@ class SaveOrdersController extends Controller
 
         if(save_orders::insert($user_id,$items)){
             ConfirmOrderByShopController::sendmail();
-            $itemis=Cart::delete_items($user_id);
-            return "elment az email";
+            Cart::delete_items($user_id);
+
+            //visszaigazolás a rendelés feldolgozásáról;
+
+
+            return redirect()->route('home');
         }
 
         return view('unsuccess');

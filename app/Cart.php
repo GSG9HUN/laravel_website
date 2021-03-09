@@ -14,7 +14,7 @@ class Cart extends Model
     }
 
     public function getSum(){
-        $results = Cart::query()->select('quantity','price')->get();
+        $results = Cart::query()->select('quantity','price')->where('userid','=',auth()->id())->get();
         $sum = array();
         foreach ($results as $value){
                 $multiply = $value['price']* $value['quantity'];

@@ -11,14 +11,17 @@ class ConfirmOrderByShop extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $items;
+    public $user_id;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($items)
+    public function __construct($items,$user_id)
     {
         $this->items=$items;
+        $this->user_id=$user_id;
     }
 
     /**

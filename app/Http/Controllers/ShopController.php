@@ -29,7 +29,10 @@ class ShopController extends Controller
      */
     public function show($name)
     {
+
+        
         $product = Item::where('name',$name)->firstOrFail();
+
 
         return view('shop')->with('item',$product);
     }

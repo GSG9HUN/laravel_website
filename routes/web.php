@@ -48,7 +48,7 @@ Route::get('/profile','UserController@index')->middleware('verified')->name('pro
 
 Route::get('/home', 'IndexController@index')->middleware('verified')->name('home');
 
-Route::get("/confirmByShop/{user_id}/{token}/{item_ids}","SaveOrdersController@verify")->name('confirmByShop');
+Route::get("/confirmByShop/{user_id}","SaveOrdersController@verify")->name('confirmByShop');
 
 Route::post("/purchase",function (){
     $items = \App\Cart::query()->where('userid','=',\auth()->id())->get();
