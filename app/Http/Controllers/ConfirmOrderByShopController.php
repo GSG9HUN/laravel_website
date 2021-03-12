@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Mail\ConfirmOrderByShop;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
 class ConfirmOrderByShopController extends Controller

@@ -1,7 +1,8 @@
-window.onload= function (){
+document.addEventListener("DOMContentLoaded",()=>{
     var english = document.getElementById("en");
     var netherland = document.getElementById("nether");
     var hungarian = document.getElementById("hu");
+
 
     netherland.addEventListener("click",(e)=>{
         document.body.className = "nether";
@@ -12,4 +13,6 @@ window.onload= function (){
     english.addEventListener("click",(e)=>{
         document.body.className = "en";
     })
-}
+})
+
+

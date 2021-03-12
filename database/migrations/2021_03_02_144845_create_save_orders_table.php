@@ -22,8 +22,8 @@ class CreateSaveOrdersTable extends Migration
             $table->timestamps();
 
 
-            $table->foreign('user_id')->references('id')->on('laravel.users')->onUpdate('CASCADE');
-            $table->foreign('item_id')->references('id')->on('laravel.items')->onUpdate('CASCADE');
+            $table->foreign('user_id')->references('id')->on('laravel.users');
+            $table->foreign('item_id')->references('id')->on('laravel.items');
         });
     }
 

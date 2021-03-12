@@ -32,6 +32,7 @@
     <script src="{{asset('js/set_language.js')}}"></script>
     <script src="{{asset('js/Language reminder/loader.js')}}"></script>
     <script src="{{asset('js/Language reminder/saver.js')}}"></script>
+    <script src="{{asset('js/scrollTop.js')}}"></script>
 
 </head>
 

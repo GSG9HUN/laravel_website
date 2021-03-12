@@ -77,6 +77,7 @@
 
             <!--SHIPPING METHOD END-->
             <!--CREDIT CART PAYMENT-->
+        <form>
         <div id="card_payment" class="panel panel-info" style="display: none">
             <div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
             <div class="panel-body">
@@ -93,11 +94,11 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-12"><strong>Credit Card Number:</strong></div>
-                    <div class="col-md-12"><input type="text" class="form-control" name="car_number" value="" /></div>
+                    <div class="col-md-12"><input type="text" class="form-control" name="car_number" maxlength="16" size="16"/></div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12"><strong>Card CVV:</strong></div>
-                    <div class="col-md-12"><input type="text" class="form-control" name="car_code" value="" /></div>
+                    <div class="col-md-12"><input type="text" class="form-control" name="car_code" maxlength="3" size="3"/></div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
@@ -151,6 +152,7 @@
 
             </div>
         </div>
+        </form>
         <!--CREDIT CART PAYMENT END-->
 
 
