@@ -27,7 +27,8 @@ Route::get('/shop','IndexController@index')->middleware('verified')->name('shop'
 
 Route::get('/shop/{name}','ShopController@show')->middleware('verified')->name('shop.show');
 Route::post('/cart/{userid}','CartController@show')->middleware('verified')->name('cart.show');
-Route::get('/cart/{id}/{param}','CartController@index')->middleware('verified')->name('cart.index');
+Route::post('/cart/{id}','CartController@destroy')->middleware('verified')->name('cart.destroy');
+Route::get('/cart/{id}','CartController@add')->middleware('verified')->name('cart.add');
 Route::post('/cart','CartController@store')->middleware('verified')->name('cart.store');
 //Auth::routes();
 Auth::routes(['verify' => true]);
