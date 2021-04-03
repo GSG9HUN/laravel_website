@@ -32,6 +32,7 @@
     <script src="{{asset('js/set_language.js')}}"></script>
     <script src="{{asset('js/Language reminder/loader.js')}}"></script>
     <script src="{{asset('js/Language reminder/saver.js')}}"></script>
+    <script src="{{asset('js/scrollTop.js')}}"></script>
 
 </head>
 
@@ -47,7 +48,6 @@
 <div id="content_wrap_f_preloader"> <!--content_wrap_f_preloader start-->
     @include('layouts.nav_container')
 
-    @include('layouts.login_modal')
     <div class="bh_header_space"></div>
 
 

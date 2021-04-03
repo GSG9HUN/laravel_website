@@ -27,8 +27,7 @@ Route::get('/shop','IndexController@index')->middleware('verified')->name('shop'
 
 Route::get('/shop/{name}','ShopController@show')->middleware('verified')->name('shop.show');
 Route::post('/cart/{userid}','CartController@show')->middleware('verified')->name('cart.show');
-Route::post('/cart/{id}','CartController@destroy')->middleware('verified')->name('cart.destroy');
-Route::get('/cart/{id}','CartController@add')->middleware('verified')->name('cart.add');
+Route::get('/cart/{id}/{param}','CartController@index')->middleware('verified')->name('cart.index');
 Route::post('/cart','CartController@store')->middleware('verified')->name('cart.store');
 //Auth::routes();
 Auth::routes(['verify' => true]);
@@ -43,9 +42,13 @@ Route::Post("/search/order",'SearchController@show')->name('detailed.search');
 
 Route::get( "/profile/{id}",'UserDetailsController@update')->name('save');
 
+Route::post( "/confirm/{id}",'SaveOrdersController@index')->name('confirm');
+
 Route::get('/profile','UserController@index')->middleware('verified')->name('profile');
 
 Route::get('/home', 'IndexController@index')->middleware('verified')->name('home');
+
+Route::get("/confirmByShop/{user_id}","SaveOrdersController@verify")->name('confirmByShop');
 
 Route::post("/purchase",function (){
     $items = \App\Cart::query()->where('userid','=',\auth()->id())->get();

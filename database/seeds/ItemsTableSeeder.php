@@ -75,7 +75,7 @@ class ItemsTableSeeder extends Seeder
             'capacity'=>'8GB'
         ]);
         Item::create([
-            'name'=>'G.Skill 16GB /3200 TridentZ RGB DDR4 RAM KIT (2x8GB)',
+            'name'=>'G.Skill 16GB 3200 TridentZ RGB DDR4 RAM KIT (2x8GB)',
             'category'=>'RAM',
             'brand'=>'G.Skill',
             'price'=>'44690',
@@ -97,7 +97,7 @@ class ItemsTableSeeder extends Seeder
             'capacity'=>'128GB'
         ]);
         Item::create([
-            'name'=>'Kingston 32GB /2666 HyperX Impact DDR4 Notebook RAM KIT (2x16GB)',
+            'name'=>'Kingston 32GB 2666 HyperX Impact DDR4 Notebook RAM KIT (2x16GB)',
             'category'=>'RAM',
             'brand'=>'Kingston',
             'price'=>'67634',
@@ -108,7 +108,7 @@ class ItemsTableSeeder extends Seeder
             'capacity'=>'32GB'
         ]);
         Item::create([
-            'name'=>'V7 4GB /667 DDR2 Szerver RAM',
+            'name'=>'V7 4GB 667 DDR2 Server RAM',
             'category'=>'RAM',
             'brand'=>'V7',
             'price'=>'8230',

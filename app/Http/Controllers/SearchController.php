@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Cart;
 use App\Item;
 use Illuminate\Http\Request;
-use Symfony\Component\Console\Input\Input;
-use function GuzzleHttp\Psr7\str;
+
 
 class SearchController extends Controller
 {
