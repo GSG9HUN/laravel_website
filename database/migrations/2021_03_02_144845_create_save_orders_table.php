@@ -22,8 +22,8 @@ class CreateSaveOrdersTable extends Migration
             $table->timestamps();
 
 
-            $table->foreign('user_id')->references('id')->on('laravel.users');
-            $table->foreign('item_id')->references('id')->on('laravel.items');
+            $table->foreign('user_id')->references('id')->on('webshop.users');
+            $table->foreign('item_id')->references('id')->on('webshop.items');
         });
     }
 
