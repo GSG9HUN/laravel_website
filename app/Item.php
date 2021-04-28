@@ -21,15 +21,15 @@ class Item extends Model
 
 
 
-public static function getMax()
-{
-    $result = Item::query()->max('price');
-    return $result;
-}
+    public static function getMax()
+    {
+        $result = Item::query()->max('price');
+        return $result;
+    }
 
-public static function getMin()
-{
-    $result = Item::query()->min('price');
-    return $result;
-}
+    public static function getMin()
+    {
+        $result = Item::query()->min('price');
+        return $result;
+    }
 }

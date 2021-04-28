@@ -33,12 +33,10 @@ class UserDetailsController extends Controller
                     'Address'=>$request['Address'],
                     'Phone'=>$request['Phone'],
                 ]);
-
             }else{
                 User::query()->where('id',$id)->update([
                     'email'=>$request['email']
                 ]);
-
                 UserDetails::query()->where('id',$id)->update([
                     'email'=>$request['email'],
                     'FirstName'=>$request['First_name'],
@@ -49,11 +47,6 @@ class UserDetailsController extends Controller
                     'Phone'=>$request['Phone'],
                 ]);
             }
-
-
-
-
-
             $details = UserDetails::all();
             return view('profile')->with('details',$details);
         }catch (QueryException $e){

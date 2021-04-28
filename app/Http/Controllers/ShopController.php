@@ -16,7 +16,7 @@ class ShopController extends Controller
     {
         $items = Item::all();
 
-        return view('shop')->with('items',$items);
+        return view('index')->with('items',$items);
     }
 
 

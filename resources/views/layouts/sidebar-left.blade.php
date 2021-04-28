@@ -4,7 +4,7 @@
 
         <div class="filter-container">
             <div class="left_sidebar-spacer"></div>
-            <form method="Post" action="{{route('detailed.search')}}">
+            ee<form method="Post" action="{{route('detailed.search')}}">
                 @csrf
             <div class="price">
                 <h3>Ár</h3>

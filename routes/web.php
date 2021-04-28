@@ -18,12 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',"IndexController@Index" );
 
-/*Route::get('/users',function (){
-    return View::make("index");
-});*/
-
-
-Route::get('/shop','IndexController@index')->middleware('verified')->name('shop');
+Route::get('/shop','ShopController@index')->middleware('verified')->name('shop');
 
 Route::get('/shop/{name}','ShopController@show')->middleware('verified')->name('shop.show');
 Route::post('/cart/{userid}','CartController@show')->middleware('verified')->name('cart.show');
@@ -55,5 +50,4 @@ Route::post("/purchase",function (){
     $user_details = UserDetails::query()->where('id','=',\auth()->id())->firstOrFail();
     return view('purchase')->with(["items"=>$items,"user_details"=>$user_details]);
 })->middleware('verified')->name('purchase');
-
 

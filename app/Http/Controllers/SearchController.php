@@ -19,8 +19,8 @@ class SearchController extends Controller
         $words =explode(" ",$request->search);
         $guery = array();
         foreach ($words as $word)
-            array_push($guery, Item::inRandomOrder()->where('name','like','%'.$word.'%')->get());
-
+            array_push($guery, Item::inRandomOrder()
+                ->where('name','like','%'.$word.'%')->get());
         return view("search")->with('request',$guery);
     }
 
@@ -34,19 +34,19 @@ class SearchController extends Controller
     public function show(Request $request)
     {
         if($request['order_1']=="on"){
-            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderByDesc('price')->get();
-
+            $items = Item::query()->where('price','<=',intval($request['max_value']))
+                ->orderByDesc('price')->get();
         }elseif($request['order_2']=="on"){
-            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderBy('price')->get();
-
+            $items = Item::query()->where('price','<=',intval($request['max_value']))
+                ->orderBy('price')->get();
         }
         elseif($request['order_3']=="on"){
-            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderByDesc('name')->get();
-
+            $items = Item::query()->where('price','<=',intval($request['max_value']))
+                ->orderByDesc('name')->get();
         }else{
-            $items = Item::query()->where('price','<=',intval($request['max_value']))->orderBy('name')->get();
+            $items = Item::query()->where('price','<=',intval($request['max_value']))
+                ->orderBy('name')->get();
         }
-
         return view('category')->with('items',$items);
     }
 

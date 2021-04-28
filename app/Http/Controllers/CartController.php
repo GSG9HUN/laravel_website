@@ -28,7 +28,6 @@ class CartController extends Controller
     }
 
     public function remove($id){
-
         Cart::query()->where('id','=',$id)->delete();
         $items= Cart::query()->where('userid','=',auth()->id())->get();
         return view('cart')->with(['user_items'=>$items,"user_id"=>auth()->id()]);
@@ -42,18 +41,16 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-
-
-        $id=Cart::query()->select('id')->where('userid','=',$request->userid)->where('id','=',$request->id)->get();
+        $id=Cart::query()->select('id')->where('userid','=',$request->userid)
+            ->where('id','=',$request->id)->get();
         if($id->isEmpty()){
             Cart::add($request->userid,$request->id,$request->image,$request->name,1,$request->price,$request->description);
-            return  redirect()->route('home')->with('success_message','Item was  aded to your cart!');
+            return  redirect()->route('home')->with('success_message','Item was  added to your cart!');
         }
         else {
             $quantity =Cart::query()->select('quantity')->where('id','=',$request->id)->get();
             Cart::query()->where('id','=',$request->id)->update(['quantity'=>1+$quantity[0]['quantity']]);
             return redirect()->route('shop')->with('success_message','Item quantity was updated!');
-
         }
 
 
@@ -81,7 +78,6 @@ class CartController extends Controller
      */
     public function destroy(int $id)
     {
-
             $quantity =Cart::query()->select('quantity')->where('id','=',$id)->get();
             $value =  $quantity[0]['quantity'];
             Cart::query()->where('id','=',$id)->update(['quantity'=>$value-1]);
@@ -91,17 +87,13 @@ class CartController extends Controller
             }
             $items= Cart::query()->where('userid','=',auth()->id())->get();
             return view('cart')->with(['user_items'=>$items,"user_id"=>auth()->id()]);
-
-
     }
 
     public function add(int $id){
         $quantity =Cart::query()->select('quantity')->where('id','=',$id)->get();
         $value =  $quantity[0]['quantity'];
         Cart::query()->where('id','=',$id)->update(['quantity'=>$value+1]);
-        $items= Cart::query()->where('userid','=',auth()->id())->get();
         return  $this->show(auth()->id());
-        return view('cart')->with(['user_items'=>$items,"user_id"=>auth()->id()]);
     }
 
 }
